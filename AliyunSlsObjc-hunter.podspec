@@ -23,15 +23,15 @@ This SDK is mostly interpreted from the official one, but the quality of code ha
     s.source           = { :git => 'https://github.com/huntergai/AliyunLogObjc.git', :tag => s.version.to_s }
   
     s.ios.deployment_target = '8.0'
-    s.module_name = 'AliyunLogObjc'
-    s.header_dir   = "AliyunLogObjc"
+    s.module_name = 'AliyunSlsObjc-hunter'
+    s.header_dir   = "AliyunSlsObjc-hunter"
   
     s.pod_target_xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1' }
   
-    s.source_files = 'AliyunLogObjc/**/*.{h,m}'
-    s.exclude_files = 'AliyunLogObjc/**/*.pbobjc.{h,m}'
+    s.source_files = 'AliyunSlsObjc-hunter/**/*.{h,m}'
+    s.exclude_files = 'AliyunSlsObjc-hunter/**/*.pbobjc.{h,m}'
     s.requires_arc = true
-    s.prepare_command = 'protoc -I "./AliyunLogObjc" --objc_out="./AliyunLogObjc/serde" "./AliyunLogObjc/sls.proto"'
+    s.prepare_command = 'protoc -I "./AliyunSlsObjc-hunter" --objc_out="./AliyunSlsObjc-hunter/serde" "./AliyunSlsObjc-hunter/sls.proto"'
 
     s.subspec 'no-arc' do |sp|
       sp.source_files = 'AliyunSlsObjc-hunter/**/*.pbobjc.{h,m}'
