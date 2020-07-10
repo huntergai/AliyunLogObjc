@@ -7,8 +7,8 @@
 #
 
 Pod::Spec.new do |s|
-    s.name             = 'AliyunSlsObjc'
-    s.version          = '1.1.7'
+    s.name             = 'AliyunSlsObjc-hunter'
+    s.version          = '1.0.0'
     s.summary          = 'Aliyun Sls Log SDK for iOS'
   
     s.description      = <<-DESC
@@ -34,7 +34,7 @@ This SDK is mostly interpreted from the official one, but the quality of code ha
     s.prepare_command = 'protoc -I "./AliyunLogObjc" --objc_out="./AliyunLogObjc/serde" "./AliyunLogObjc/sls.proto"'
 
     s.subspec 'no-arc' do |sp|
-      sp.source_files = 'AliyunLogObjc/**/*.pbobjc.{h,m}'
+      sp.source_files = 'AliyunSlsObjc-hunter/**/*.pbobjc.{h,m}'
       sp.requires_arc = false
     end
 
